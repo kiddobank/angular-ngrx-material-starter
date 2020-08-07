@@ -149,6 +149,117 @@
           }
         }
       }
+    },
+    "kiddo": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/kiddo",
+      "sourceRoot": "projects/kiddo/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/kiddo",
+            "index": "projects/kiddo/src/index.html",
+            "main": "projects/kiddo/src/main.ts",
+            "polyfills": "projects/kiddo/src/polyfills.ts",
+            "tsConfig": "projects/kiddo/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/kiddo/src/favicon.ico",
+              "projects/kiddo/src/assets"
+            ],
+            "styles": ["projects/kiddo/src/styles.css"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/kiddo/src/environments/environment.ts",
+                  "with": "projects/kiddo/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "kiddo:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "kiddo:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "kiddo:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/kiddo/src/test.ts",
+            "polyfills": "projects/kiddo/src/polyfills.ts",
+            "tsConfig": "projects/kiddo/tsconfig.spec.json",
+            "karmaConfig": "projects/kiddo/karma.conf.js",
+            "assets": [
+              "projects/kiddo/src/favicon.ico",
+              "projects/kiddo/src/assets"
+            ],
+            "styles": ["projects/kiddo/src/styles.css"],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/kiddo/tsconfig.app.json",
+              "projects/kiddo/tsconfig.spec.json",
+              "projects/kiddo/e2e/tsconfig.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/kiddo/e2e/protractor.conf.js",
+            "devServerTarget": "kiddo:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "kiddo:serve:production"
+            }
+          }
+        }
+      }
     }
   },
   "defaultProject": "angular-ngrx-material-starter",
