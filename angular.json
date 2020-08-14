@@ -234,6 +234,16 @@
             ],
             "styles": ["projects/kiddo/src/styles.css"],
             "scripts": []
+          },
+          "configurations": {
+            "test": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/kiddo/src/environments/environment.ts",
+                  "with": "projects/kiddo/src/environments/environment.test.ts"
+                }
+              ]
+            }
           }
         },
         "lint": {
