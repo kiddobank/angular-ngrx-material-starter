@@ -1,14 +1,25 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
+import { CoreModule } from '../../../angular-ngrx-material-starter/src/app/core/core.module';
+
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HelloTestComponent } from './hello-test/hello-test.component';
+import { AppComponent } from './app/app.component';
 
 @NgModule({
-  declarations: [AppComponent, HelloTestComponent],
-  imports: [BrowserModule, AppRoutingModule],
-  providers: [],
+  imports: [
+    // angular
+    BrowserAnimationsModule,
+    BrowserModule,
+
+    // core
+    CoreModule,
+
+    // app
+    AppRoutingModule
+  ],
+  declarations: [AppComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

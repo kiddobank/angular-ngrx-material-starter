@@ -170,7 +170,10 @@
               "projects/kiddo/src/favicon.ico",
               "projects/kiddo/src/assets"
             ],
-            "styles": ["projects/kiddo/src/styles.css"],
+            "styles": [
+              "projects/kiddo/src/styles-app-loading.scss",
+              "projects/kiddo/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -232,7 +235,10 @@
               "projects/kiddo/src/favicon.ico",
               "projects/kiddo/src/assets"
             ],
-            "styles": ["projects/kiddo/src/styles.css"],
+            "styles": [
+              "projects/kiddo/src/styles-app-loading.scss",
+              "projects/kiddo/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
