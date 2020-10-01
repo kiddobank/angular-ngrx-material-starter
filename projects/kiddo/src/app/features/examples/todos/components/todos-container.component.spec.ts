@@ -5,7 +5,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { MockStore, provideMockStore } from '@ngrx/store/testing';
 import { MemoizedSelector } from '@ngrx/store';
 
-import { SharedModule } from '../../../../shared/shared.module';
+import { SharedModule } from '../../../../../../../angular-ngrx-material-starter/src/app/shared/shared.module';
 
 import * as todoActions from '../todos.actions';
 import { Todo } from '../todos.model';
