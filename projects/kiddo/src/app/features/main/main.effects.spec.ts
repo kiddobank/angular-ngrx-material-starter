@@ -9,8 +9,8 @@ import { TitleService } from '../../../../../angular-ngrx-material-starter/src/a
 
 import { actionSettingsChangeLanguage } from '../../../../../angular-ngrx-material-starter/src/app/core/settings/settings.actions';
 
-import { ExamplesEffects } from './examples.effects';
-import { State } from './examples.state';
+import { ExamplesEffects } from './main.effects';
+import { State } from './main.state';
 
 const scheduler = new TestScheduler((actual, expected) =>
   assert.deepStrictEqual(actual, expected)

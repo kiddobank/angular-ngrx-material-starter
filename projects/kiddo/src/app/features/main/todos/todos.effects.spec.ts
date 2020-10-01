@@ -6,7 +6,7 @@ import { TestScheduler } from 'rxjs/testing';
 
 import { LocalStorageService } from '../../../../../../angular-ngrx-material-starter/src/app/core/core.module';
 
-import { State } from '../examples.state';
+import { State } from '../main.state';
 import { actionTodosToggle } from './todos.actions';
 import { TodosEffects, TODOS_KEY } from './todos.effects';
 import { TodosState } from './todos.model';
