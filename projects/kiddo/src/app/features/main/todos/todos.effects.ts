@@ -5,7 +5,7 @@ import { tap, withLatestFrom } from 'rxjs/operators';
 
 import { LocalStorageService } from '../../../../../../angular-ngrx-material-starter/src/app/core/core.module';
 
-import { State } from '../examples.state';
+import { State } from '../main.state';
 import * as todoAction from './todos.actions';
 import { selectTodosState } from './todos.selectors';
 

@@ -16,8 +16,8 @@
 @import 'styles-reset.scss-theme';
 @import './app/app/app.component.scss-theme';
 @import '../../angular-ngrx-material-starter/src/app/shared/big-input/big-input/big-input.component.scss-theme';
-@import './app/features/examples/todos/components/todos-container.component.scss-theme';
-@import './app/features/examples/examples/examples.component.scss-theme';
+@import './app/features/main/todos/components/todos-container.component.scss-theme';
+@import './app/features/main/main/main.component.scss-theme';
 
 @mixin custom-components-theme($theme) {
   @include anms-styles-reset-theme($theme);

@@ -7,12 +7,12 @@ import {
   selectIsAuthenticated
 } from '../../../../../../angular-ngrx-material-starter/src/app/core/core.module';
 
-import { State } from '../examples.state';
+import { State } from '../main.state';
 
 @Component({
   selector: 'anms-examples',
-  templateUrl: './examples.component.html',
-  styleUrls: ['./examples.component.scss'],
+  templateUrl: './main.component.html',
+  styleUrls: ['./main.component.scss'],
   animations: [routeAnimations],
   changeDetection: ChangeDetectionStrategy.OnPush
 })

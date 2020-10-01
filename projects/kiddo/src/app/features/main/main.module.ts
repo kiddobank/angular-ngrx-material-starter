@@ -9,12 +9,12 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { SharedModule } from '../../../../../angular-ngrx-material-starter/src/app/shared/shared.module';
 import { environment } from '../../../environments/environment';
 
-import { FEATURE_NAME, reducers } from './examples.state';
-import { ExamplesRoutingModule } from './examples-routing.module';
-import { ExamplesComponent } from './examples/examples.component';
+import { FEATURE_NAME, reducers } from './main.state';
+import { ExamplesRoutingModule } from './main-routing.module';
+import { ExamplesComponent } from './main/main.component';
 import { TodosContainerComponent } from './todos/components/todos-container.component';
 import { TodosEffects } from './todos/todos.effects';
-import { ExamplesEffects } from './examples.effects';
+import { ExamplesEffects } from './main.effects';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(

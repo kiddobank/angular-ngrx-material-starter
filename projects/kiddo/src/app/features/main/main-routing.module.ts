@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AuthGuardService } from '../../../../../angular-ngrx-material-starter/src/app/core/core.module';
 
-import { ExamplesComponent } from './examples/examples.component';
+import { ExamplesComponent } from './main/main.component';
 import { TodosContainerComponent } from './todos/components/todos-container.component';
 
 const routes: Routes = [
