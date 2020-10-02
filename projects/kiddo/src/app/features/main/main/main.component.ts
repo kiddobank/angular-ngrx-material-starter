@@ -16,7 +16,7 @@ import { State } from '../main.state';
   animations: [routeAnimations],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ExamplesComponent implements OnInit {
+export class MainComponent implements OnInit {
   isAuthenticated$: Observable<boolean>;
 
   examples = [{ link: 'todos', label: 'anms.examples.menu.todos' }];

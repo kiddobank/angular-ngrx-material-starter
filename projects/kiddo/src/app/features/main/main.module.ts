@@ -11,7 +11,7 @@ import { environment } from '../../../environments/environment';
 
 import { FEATURE_NAME, reducers } from './main.state';
 import { ExamplesRoutingModule } from './main-routing.module';
-import { ExamplesComponent } from './main/main.component';
+import { MainComponent } from './main/main.component';
 import { TodosContainerComponent } from './todos/components/todos-container.component';
 import { TodosEffects } from './todos/todos.effects';
 import { ExamplesEffects } from './main.effects';
@@ -41,7 +41,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     }),
     EffectsModule.forFeature([ExamplesEffects, TodosEffects])
   ],
-  declarations: [ExamplesComponent, TodosContainerComponent],
+  declarations: [MainComponent, TodosContainerComponent],
   providers: []
 })
 export class ExamplesModule {

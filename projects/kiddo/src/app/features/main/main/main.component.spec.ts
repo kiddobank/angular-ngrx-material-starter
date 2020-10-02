@@ -3,15 +3,15 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterTestingModule } from '@angular/router/testing';
 
-import { SharedModule } from '../../../shared/shared.module';
+import { SharedModule } from '../../../../../../angular-ngrx-material-starter/src/app/shared/shared.module';
 
-import { ExamplesComponent } from './examples.component';
+import { MainComponent } from './main.component';
 import { provideMockStore } from '@ngrx/store/testing';
 import { TranslateModule } from '@ngx-translate/core';
 
-describe('ExamplesComponent', () => {
-  let component: ExamplesComponent;
-  let fixture: ComponentFixture<ExamplesComponent>;
+describe('MainComponent', () => {
+  let component: MainComponent;
+  let fixture: ComponentFixture<MainComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -31,12 +31,12 @@ describe('ExamplesComponent', () => {
           }
         })
       ],
-      declarations: [ExamplesComponent]
+      declarations: [MainComponent]
     }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ExamplesComponent);
+    fixture = TestBed.createComponent(MainComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

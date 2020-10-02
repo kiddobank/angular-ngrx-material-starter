@@ -8,13 +8,13 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'examples',
+    path: 'main',
     loadChildren: () =>
       import('./features/main/main.module').then((m) => m.ExamplesModule)
   },
   {
     path: '**',
-    redirectTo: 'examples'
+    redirectTo: 'main'
   }
 ];
 
