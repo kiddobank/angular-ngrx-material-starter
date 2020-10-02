@@ -14,7 +14,7 @@ import {
 import { actionSettingsChangeLanguage } from '../../../../../angular-ngrx-material-starter/src/app/core/settings/settings.actions';
 
 @Injectable()
-export class ExamplesEffects {
+export class MainEffects {
   constructor(
     private actions$: Actions,
     private store: Store<AppState>,

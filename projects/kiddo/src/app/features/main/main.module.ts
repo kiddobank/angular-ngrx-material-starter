@@ -10,11 +10,11 @@ import { SharedModule } from '../../../../../angular-ngrx-material-starter/src/a
 import { environment } from '../../../environments/environment';
 
 import { FEATURE_NAME, reducers } from './main.state';
-import { ExamplesRoutingModule } from './main-routing.module';
+import { MainRoutingModule } from './main-routing.module';
 import { MainComponent } from './main/main.component';
 import { TodosContainerComponent } from './todos/components/todos-container.component';
 import { TodosEffects } from './todos/todos.effects';
-import { ExamplesEffects } from './main.effects';
+import { MainEffects } from './main.effects';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(
@@ -29,7 +29,7 @@ export function HttpLoaderFactory(http: HttpClient) {
   imports: [
     LazyElementsModule,
     SharedModule,
-    ExamplesRoutingModule,
+    MainRoutingModule,
     StoreModule.forFeature(FEATURE_NAME, reducers),
     TranslateModule.forChild({
       loader: {
@@ -39,11 +39,11 @@ export function HttpLoaderFactory(http: HttpClient) {
       },
       isolate: true
     }),
-    EffectsModule.forFeature([ExamplesEffects, TodosEffects])
+    EffectsModule.forFeature([MainEffects, TodosEffects])
   ],
   declarations: [MainComponent, TodosContainerComponent],
   providers: []
 })
-export class ExamplesModule {
+export class MainModule {
   constructor() {}
 }
