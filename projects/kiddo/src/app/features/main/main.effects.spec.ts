@@ -42,7 +42,7 @@ describe('SettingsEffects', () => {
   describe('setTranslateServiceLanguage', () => {
     it('should not dispatch action', () => {
       const actions = new Actions<any>();
-      const effect = new ExamplesEffects(
+      const effect = new MainEffects(
         actions,
         store,
         translateService,
@@ -57,7 +57,7 @@ describe('SettingsEffects', () => {
   describe('setTitle', () => {
     it('should not dispatch action', () => {
       const actions = new Actions<any>();
-      const effect = new ExamplesEffects(
+      const effect = new MainEffects(
         actions,
         store,
         translateService,
@@ -78,7 +78,7 @@ describe('SettingsEffects', () => {
         const routerEvent = new ActivationEnd(router.routerState.snapshot);
         router.events = cold('a', { a: routerEvent });
 
-        const effect = new ExamplesEffects(
+        const effect = new MainEffects(
           actions,
           store,
           translateService,
