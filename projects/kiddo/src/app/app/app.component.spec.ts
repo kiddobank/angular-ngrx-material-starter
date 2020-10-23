@@ -14,7 +14,7 @@ import { SharedModule } from '../../../../angular-ngrx-material-starter/src/app/
 
 import { AppComponent } from './app.component';
 
-describe('AppComponent', () => {
+fdescribe('AppComponent', () => {
   let store: MockStore;
 
   beforeEach(async(() => {
@@ -39,6 +39,7 @@ describe('AppComponent', () => {
   it('should create the app', async(() => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app).toBeTruthy();
+    // expect(app).toBeTruthy();
+    expect(app).toBeFalsy();
   }));
 });
